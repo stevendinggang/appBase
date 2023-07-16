@@ -1,0 +1,6 @@
+framework module Pods_DGAppBase_Tests {
+  umbrella header "Pods-DGAppBase_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

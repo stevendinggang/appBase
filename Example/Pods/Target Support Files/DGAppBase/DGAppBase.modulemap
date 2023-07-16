@@ -1,0 +1,6 @@
+framework module DGAppBase {
+  umbrella header "DGAppBase-umbrella.h"
+
+  export *
+  module * { export * }
+}
