@@ -27,10 +27,10 @@ class FujiBaseTabBarController: UITabBarController {
     /// 添加所有子控制器
     func setupChildViewControllers() {
         
-        setupOneChildViewController(childVC: FujiWaterMarkPageVC(), title: "水印", image: "4Normal", selectedImage: "4Normal")
-        setupOneChildViewController(childVC: ViewController(), title: "首页", image: "icon_camera_Normal", selectedImage: "icon_camera_Normal")
-        setupOneChildViewController(childVC: FujiHomePageVC(), title: "预设", image: "3465660_Normal", selectedImage: "3465660_Normal")
-        setupOneChildViewController(childVC: MineViewController(), title: "我的", image: "icon_user_#9A_80px_Normal", selectedImage: "icon_user_#9A_80px_Normal")
+//        setupOneChildViewController(childVC: FujiWaterMarkPageVC(), title: "水印", image: "4Normal", selectedImage: "4Normal")
+//        setupOneChildViewController(childVC: ViewController(), title: "首页", image: "icon_camera_Normal", selectedImage: "icon_camera_Normal")
+//        setupOneChildViewController(childVC: FujiHomePageVC(), title: "预设", image: "3465660_Normal", selectedImage: "3465660_Normal")
+//        setupOneChildViewController(childVC: MineViewController(), title: "我的", image: "icon_user_#9A_80px_Normal", selectedImage: "icon_user_#9A_80px_Normal")
     }
     
     /// 初始化一个子控制器
@@ -41,7 +41,7 @@ class FujiBaseTabBarController: UITabBarController {
             childVC.tabBarItem.selectedImage = UIImage(named: selectedImage)?.withRenderingMode(.alwaysOriginal)
         }
         let nav = FujiBaseNavigationController(rootViewController: childVC)
-        addChild(nav)
+//        addChild(nav)
     }
     
     

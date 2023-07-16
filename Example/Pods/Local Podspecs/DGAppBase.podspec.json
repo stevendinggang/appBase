@@ -12,7 +12,7 @@
     "Dickens": "306922428@qq.com"
   },
   "source": {
-    "git": "https://github.com/Dickens/DGAppBase.git",
+    "git": "https://github.com/stevendinggang/appBase.git",
     "tag": "0.1.0"
   },
   "platforms": {
