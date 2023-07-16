@@ -35,7 +35,7 @@ class FujiBaseNavigationController: UINavigationController, UIGestureRecognizerD
     // MARK: - Push View Controller
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        if childViewControllers.count > 0 {
+        if children.count > 0 {
             let backItem = UIBarButtonItem.backItem(imageName: "ic_dynamic_nav_back", target: self, action: #selector(handleBackButton))
             viewController.navigationItem.leftBarButtonItem = backItem
             viewController.hidesBottomBarWhenPushed = true

@@ -41,7 +41,7 @@ class FujiBaseTabBarController: UITabBarController {
             childVC.tabBarItem.selectedImage = UIImage(named: selectedImage)?.withRenderingMode(.alwaysOriginal)
         }
         let nav = FujiBaseNavigationController(rootViewController: childVC)
-//        addChild(nav)
+        addChild(nav)
     }
     
     
