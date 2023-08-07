@@ -10,7 +10,7 @@ import UIKit
 
 extension UILabel {
     
-    convenience init(text: String? = nil, textColor: UIColor = .black, font: UIFont = UIFont.systemFont(ofSize: 14.0), textAlignment: NSTextAlignment = .left, numberOfLines: Int = 1) {
+    public convenience init(text: String? = nil, textColor: UIColor = .black, font: UIFont = UIFont.systemFont(ofSize: 14.0), textAlignment: NSTextAlignment = .left, numberOfLines: Int = 1) {
         self.init()
         self.text = text
         self.textColor = textColor
@@ -19,7 +19,7 @@ extension UILabel {
         self.numberOfLines = numberOfLines
     }
     
-    static func getLabel(Title: String? = nil, textColor: UIColor = .black, font: UIFont = UIFont.systemFont(ofSize: 14.0), textAlignment: NSTextAlignment = .left, numberOfLines: Int = 1) -> UILabel {
+    public static func getLabel(Title: String? = nil, textColor: UIColor = .black, font: UIFont = UIFont.systemFont(ofSize: 14.0), textAlignment: NSTextAlignment = .left, numberOfLines: Int = 1) -> UILabel {
         let label = UILabel.init()
         
         label.text = Title

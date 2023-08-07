@@ -18,13 +18,13 @@ enum FujiRefreshType : Int {
     case FujiRefreshTypeFooter
 }
 
-class FujiBaseVC: UIViewController {
+open class FujiBaseVC: UIViewController {
     
     deinit {
         print(" FujiBaseVC - dealloc ")
     }
     
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = .background
@@ -34,34 +34,34 @@ class FujiBaseVC: UIViewController {
     }
     
     /// 标题
-    var navTitle :String? {
+    open var navTitle :String? {
         didSet {
             self.navigationItem.title = navTitle
         }
     }
     /// 导航栏左侧标题
-    var navLeftTitle :String? {
+    open var navLeftTitle :String? {
         didSet {
             let item =  UIBarButtonItem.textItem(title: navLeftTitle ?? "", titleColor: .BaseNavTextColor, target: self, action: #selector(ClickLeftItem))
             self.navigationItem.leftBarButtonItem = item
         }
     }
     /// 导航栏左侧img
-    var navLeftImage :String? {
+    open var navLeftImage :String? {
         didSet {
             let item =  UIBarButtonItem.imageItem(imageName: navLeftImage ?? "", target: self, action: #selector(ClickLeftItem))
             self.navigationItem.leftBarButtonItem = item
         }
     }
     /// 导航栏右侧标题
-    var navRightTitle :String? {
+    open var navRightTitle :String? {
         didSet {
             let item =  UIBarButtonItem.textItem(title: navRightTitle ?? "", titleColor: .BaseNavTextColor, target: self, action: #selector(ClickRightItem))
             self.navigationItem.rightBarButtonItem = item
         }
     }
     /// 导航栏右侧img
-    var navRightImage :String? {
+    open var navRightImage :String? {
         didSet {
             let item =  UIBarButtonItem.imageItem(imageName: navRightImage ?? "", target: self, action: #selector(ClickRightItem))
             self.navigationItem.rightBarButtonItem = item
@@ -69,9 +69,9 @@ class FujiBaseVC: UIViewController {
     }
     
     /// 点击导航栏左侧item Block
-    var FujiClickNavLeftItemBlock:(() -> (Void))?
+    open var FujiClickNavLeftItemBlock:(() -> (Void))?
     /// 点击导航栏右侧item Block
-    var FujiClickNavRightItemBlock:(() -> (Void))?
+    open var FujiClickNavRightItemBlock:(() -> (Void))?
     @objc func ClickLeftItem() {
         self.FujiClickNavLeftItemBlock?()
     }

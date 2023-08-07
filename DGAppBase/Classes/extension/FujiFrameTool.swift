@@ -10,7 +10,7 @@ import UIKit
 // MARK: - 尺寸信息
 
 /// 屏幕宽度
-let kScreenWidth = UIScreen.main.bounds.width
+public let kScreenWidth = UIScreen.main.bounds.width
 /// 屏幕高度
 let kScreenHeight = UIScreen.main.bounds.height
 
@@ -30,7 +30,7 @@ let kBottomSafeHeight = INDICATOR_HEIGHT()
 
 /// 导航条高度
 let kContentNavBarHeight = 44.0
-let kNavHeight = (kStatusBarHeight + kContentNavBarHeight)
+public let kNavHeight = (kStatusBarHeight + kContentNavBarHeight)
 let kTabBarHeight = (49.0 + kBottomSafeHeight)
 
 /// tableView Y

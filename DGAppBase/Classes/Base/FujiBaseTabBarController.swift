@@ -8,13 +8,12 @@
 
 import UIKit
 
-class FujiBaseTabBarController: UITabBarController {
+open class FujiBaseTabBarController: UITabBarController {
     
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         
         setupItemTitleTextAttributes()
-        setupChildViewControllers()
     }
     
     /// 设置所有UITabBarItem的文字属性
@@ -24,17 +23,9 @@ class FujiBaseTabBarController: UITabBarController {
         setTabBarColor(normalColor, selectColor, nil)
     }
     
-    /// 添加所有子控制器
-    func setupChildViewControllers() {
-        
-//        setupOneChildViewController(childVC: FujiWaterMarkPageVC(), title: "水印", image: "4Normal", selectedImage: "4Normal")
-//        setupOneChildViewController(childVC: ViewController(), title: "首页", image: "icon_camera_Normal", selectedImage: "icon_camera_Normal")
-//        setupOneChildViewController(childVC: FujiHomePageVC(), title: "预设", image: "3465660_Normal", selectedImage: "3465660_Normal")
-//        setupOneChildViewController(childVC: MineViewController(), title: "我的", image: "icon_user_#9A_80px_Normal", selectedImage: "icon_user_#9A_80px_Normal")
-    }
     
     /// 初始化一个子控制器
-    fileprivate func setupOneChildViewController(childVC: UIViewController, title: String, image: String, selectedImage: String) {
+    open func setupOneChildViewController(childVC: UIViewController, title: String, image: String, selectedImage: String) {
         childVC.tabBarItem.title = title
         if !image.isEmpty { // 图片名有具体值
             childVC.tabBarItem.image = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
@@ -46,7 +37,7 @@ class FujiBaseTabBarController: UITabBarController {
     
     
     // MARK: - 设置TabBar 文字颜色和背景色
-    func setTabBarColor(_ normalColor: UIColor, _ selectColor: UIColor, _ bgColor: UIColor?) {
+    open func setTabBarColor(_ normalColor: UIColor, _ selectColor: UIColor, _ bgColor: UIColor?) {
         let tabBarItem = UITabBarItem.appearance()
         
         // 普通状态下的文字属性

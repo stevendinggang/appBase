@@ -6,7 +6,7 @@
 
 import UIKit
 
-extension UIColor {
+public extension UIColor {
     
     // 定义应用程序的颜色方案
     static let fujiRed = UIColor(hex: "ED1A3B") // 富士红颜色
