@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DGAppBase'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'A meaningful iOS baseTool of my library.'
   s.swift_versions   = [ '5.0', '5.5']
 
